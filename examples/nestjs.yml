@@ -1,0 +1,144 @@
+description: "NestJS Rest Template"
+
+generate:
+  service:
+    description: "Generate a service declaration"
+    structure:
+      src/$PARAM_PLURAL_NAME$/$PARAM_PLURAL_NAME$.service.ts:
+        content: |-
+          import { Injectable } from '@nestjs/common';
+
+          @Injectable()
+          export class $PASCAL_PLURAL_NAME$Service {}
+      src/$PARAM_PLURAL_NAME$/$PARAM_PLURAL_NAME$.service.spec.ts:
+        content: |-
+          import { Test, TestingModule } from '@nestjs/testing';
+          import { $PASCAL_PLURAL_NAME$Service } from './$PARAM_PLURAL_NAME$.service';
+
+          describe('$PASCAL_PLURAL_NAME$Service', () => {
+            let service: $PASCAL_PLURAL_NAME$Service;
+
+            beforeEach(async () => {
+              const module: TestingModule = await Test.createTestingModule({
+                providers: [$PASCAL_PLURAL_NAME$Service],
+              }).compile();
+
+              service = module.get<$PASCAL_PLURAL_NAME$Service>($PASCAL_PLURAL_NAME$Service);
+            });
+
+            it('should be defined', () => {
+              expect(service).toBeDefined();
+            });
+          });
+
+  controller:
+    description: "Generate a controller declaration"
+    structure:
+      src/$PARAM_PLURAL_NAME$/$PARAM_PLURAL_NAME$.controller.ts:
+        content: |-
+          import { Controller } from '@nestjs/common';
+
+          @Controller('$PATH_PLURAL_NAME$')
+          export class $PASCAL_PLURAL_NAME$Controller {}
+      src/$PARAM_PLURAL_NAME$/$PARAM_PLURAL_NAME$.controller.spec.ts:
+        content: |-
+          import { Test, TestingModule } from '@nestjs/testing';
+          import { $PASCAL_PLURAL_NAME$Controller } from './$PARAM_PLURAL_NAME$.controller';
+
+          describe('$PASCAL_PLURAL_NAME$Controller', () => {
+            let controller: $PASCAL_PLURAL_NAME$Controller;
+
+            beforeEach(async () => {
+              const module: TestingModule = await Test.createTestingModule({
+                controllers: [$PASCAL_PLURAL_NAME$Controller],
+              }).compile();
+
+              controller = module.get<$PASCAL_PLURAL_NAME$Controller>($PASCAL_PLURAL_NAME$Controller);
+            });
+
+            it('should be defined', () => {
+              expect(controller).toBeDefined();
+            });
+          });
+
+
+
+
+
+  resource:
+    src/$PARAM_PLURAL_NAME$/$PARAM_PLURAL_NAME$.service.ts:
+      content: |-
+        import { Injectable } from '@nestjs/common';
+
+        @Injectable()
+        export class $PASCAL_PLURAL_NAME$Service {}
+    src/$PARAM_PLURAL_NAME$/$PARAM_PLURAL_NAME$.service.spec.ts:
+      content: |-
+        import { Test, TestingModule } from '@nestjs/testing';
+        import { $PASCAL_PLURAL_NAME$Service } from './$PARAM_PLURAL_NAME$.service';
+
+        describe('$PASCAL_PLURAL_NAME$Service', () => {
+          let service: $PASCAL_PLURAL_NAME$Service;
+
+          beforeEach(async () => {
+            const module: TestingModule = await Test.createTestingModule({
+              providers: [$PASCAL_PLURAL_NAME$Service],
+            }).compile();
+
+            service = module.get<$PASCAL_PLURAL_NAME$Service>($PASCAL_PLURAL_NAME$Service);
+          });
+
+          it('should be defined', () => {
+            expect(service).toBeDefined();
+          });
+        });
+    src/$PARAM_PLURAL_NAME$/$PARAM_PLURAL_NAME$.controller.ts:
+      content: |-
+        import { Controller } from '@nestjs/common';
+
+        @Controller('$PATH_PLURAL_NAME$')
+        export class $PASCAL_PLURAL_NAME$Controller {}
+    src/$PARAM_PLURAL_NAME$/$PARAM_PLURAL_NAME$.controller.spec.ts:
+      content: |-
+        import { Test, TestingModule } from '@nestjs/testing';
+        import { $PASCAL_PLURAL_NAME$Controller } from './$PARAM_PLURAL_NAME$.controller';
+
+        describe('$PASCAL_PLURAL_NAME$Controller', () => {
+          let controller: $PASCAL_PLURAL_NAME$Controller;
+
+          beforeEach(async () => {
+            const module: TestingModule = await Test.createTestingModule({
+              controllers: [$PASCAL_PLURAL_NAME$Controller],
+            }).compile();
+
+            controller = module.get<$PASCAL_PLURAL_NAME$Controller>($PASCAL_PLURAL_NAME$Controller);
+          });
+
+          it('should be defined', () => {
+            expect(controller).toBeDefined();
+          });
+        });
+    src/$PARAM_PLURAL_NAME$/$PARAM_PLURAL_NAME$.module.ts:
+      content: |-
+        import { Module } from '@nestjs/common';
+        import { $PASCAL_PLURAL_NAME$Service } from './$PARAM_PLURAL_NAME$.service';
+        import { $PASCAL_PLURAL_NAME$Controller } from './$PARAM_PLURAL_NAME$.controller';
+
+        @Module({
+          controllers: [$PASCAL_PLURAL_NAME$Controller],
+          providers: [$PASCAL_PLURAL_NAME$Service]
+        })
+        export class $PASCAL_PLURAL_NAME$Module {}
+    src/$PARAM_PLURAL_NAME$/dto/create-$PARAM_SINGULAR_NAME$.dto.ts:
+      content: |-
+        export class Create$PASCAL_SINGULAR_NAME$Dto {}
+    src/$PARAM_PLURAL_NAME$/dto/update-$PARAM_SINGULAR_NAME$.dto.ts:
+      content: |-
+        import { PartialType } from '@nestjs/mapped-types';
+        import { CreateCatDto } from './create-$PARAM_SINGULAR_NAME$.dto';
+
+        export class Update$PASCAL_SINGULAR_NAME$Dto extends PartialType(Create$PASCAL_SINGULAR_NAME$Dto) {}
+    src/$PARAM_PLURAL_NAME$/entities/$PARAM_SINGULAR_NAME$.entity.ts:
+      content: |-
+        export class $PASCAL_SINGULAR_NAME$ {}
+

@@ -1,0 +1,16 @@
+{
+  "extends": [
+    "oclif",
+    "oclif-typescript"
+  ],
+  "rules": {
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "semi": ["error", "always"],
+    "no-void": "off",
+    "no-implicit-coercion": "off",
+    "no-await-in-loop": "off"
+  }
+}

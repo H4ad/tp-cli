@@ -1,0 +1,32 @@
+description: "The Template for TP CLI."
+
+generate:
+  command:
+    description: "Add a new command"
+    structure:
+      src/commands/$PARAM_SINGULAR_NAME$/index.ts:
+        content: |-
+          import CustomCommand from '../../utils/oclif/custom-command';
+
+          export default class $PASCAL_SINGULAR_NAME$ extends CustomCommand {
+            static description = 'Describe what this command will do.'
+
+            static examples = [
+              '$ tp $PARAM_SINGULAR_NAME$',
+            ]
+
+            static flags = {
+              // force: Flags.boolean({ description: 'An example of flag', aliases: ['f'], default: false }),
+            }
+
+            static args = {
+              // name: Args.string({ description: 'An example of argument', required: true }),
+            }
+
+            async run(): Promise<void> {
+              const { args, flags } = await this.parse($PASCAL_SINGULAR_NAME$);
+
+              this.log(JSON.stringify(args, null, 2));
+              this.log(JSON.stringify(flags, null, 2));
+            }
+          }
