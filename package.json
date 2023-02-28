@@ -13,7 +13,7 @@
   "homepage": "https://github.com/H4ad/tp-cli",
   "license": "MIT",
   "main": "dist/index.js",
-  "repository": "H4ad/tp-cli",
+  "repository": "https://github.com/H4ad/tp-cli",
   "scripts": {
     "build": "shx rm -rf dist && tsc -b",
     "lint": "eslint . --ext .ts --config .eslintrc",
