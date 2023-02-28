@@ -1,7 +1,7 @@
 import { Command } from '@oclif/core';
 import CustomError from './custom-error';
-import JsonError from './json-error';
-import JsonResult from './json-result';
+import { JsonError } from './json-error';
+import { JsonResult } from './json-result';
 
 export default abstract class CustomCommand extends Command {
   static enableJsonFlag = true;

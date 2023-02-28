@@ -1,4 +1,4 @@
-export default interface JsonError {
+export interface JsonError {
   status: string;
   message: string;
   code?: string;

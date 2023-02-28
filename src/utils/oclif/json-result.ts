@@ -1,3 +1,3 @@
-export default interface JsonResult {
+export interface JsonResult {
   status: string;
 }
