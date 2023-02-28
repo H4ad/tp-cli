@@ -20,7 +20,7 @@
     "postpack": "shx rm -f oclif.manifest.json",
     "posttest": "yarn lint",
     "prepack": "yarn build && oclif manifest && oclif readme",
-    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
+    "test": "mocha --forbid-only \"test/**/*.spec.ts\"",
     "coverage": "codecov --disable=gcov",
     "version": "oclif readme && git add README.md"
   },
