@@ -178,7 +178,7 @@ You can install templates from anywhere, you just need a link to a valid `yaml` 
 To test it out, you can run the `install` command with a file hosted inside Github Gist:
 
 ```bash
-tp install from-internet https://gist.githubusercontent.com/H4ad/bc6e6f2af449942b8cd1b8220aa4adb9/raw/ae56ca7486b1d34b255654b13bff85fb95526a49/.tp.yml
+tp install from-internet https://gist.githubusercontent.com/H4ad/bc6e6f2af449942b8cd1b8220aa4adb9/raw/82afb3493454f18f5aa2a0abd408307c4a7b4c6c/tp.yml
 ```
 
 The first argument will be the template name and the second is the template URL.
