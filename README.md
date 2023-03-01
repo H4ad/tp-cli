@@ -99,7 +99,7 @@ generate:
           // put the code you want
 ```
 
-To customize your the previous template that we had created, you can run:
+To customize the previously created template, you can run:
 
 ```bash
 tp open my-template
@@ -195,7 +195,7 @@ To know what resources you can create, based on the installed templates you have
 tp ls
 ```
 
-If you want to know which resource only for one model, you can use pass the name like:
+If you want to know which resources for a specific model, you can use pass the name like:
 
 ```bash
 tp ls my-model
