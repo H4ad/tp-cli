@@ -7,12 +7,12 @@ import { join } from 'node:path';
 import { TPConfig, TPTemplate } from '../../utils/definitions';
 import CustomCommand from '../../utils/oclif/custom-command';
 import CustomError from '../../utils/oclif/custom-error';
-import { DOBBY_CONFIG_FILE, DOBBY_TEMPLATES_FOLDER } from '../../utils/variables';
+import { TP_CONFIG_FILE, TP_TEMPLATES_FOLDER } from '../../utils/variables';
 import { readYamlFile } from '../../utils/yaml';
 import Start from '../start';
 
 export default class Restore extends CustomCommand {
-  static description = `Restore saved templates from "${DOBBY_CONFIG_FILE}"`;
+  static description = `Restore saved templates from "${TP_CONFIG_FILE}"`;
 
   static examples = [
     '$ tp restore',
@@ -30,10 +30,10 @@ export default class Restore extends CustomCommand {
     const { args, flags } = await this.parse(Restore);
 
     const currentPath = process.cwd();
-    const configFilepath = join(currentPath, DOBBY_CONFIG_FILE);
+    const configFilepath = join(currentPath, TP_CONFIG_FILE);
 
     if (!existsSync(configFilepath))
-      throw new CustomError(`You do not have a "${DOBBY_CONFIG_FILE}" in this current path. Are you in the correct folder?`);
+      throw new CustomError(`You do not have a "${TP_CONFIG_FILE}" in this current path. Are you in the correct folder?`);
 
     const configFile = await readYamlFile<TPConfig>(configFilepath)
     .then(config => TPConfig.parse(config));
@@ -58,7 +58,7 @@ export default class Restore extends CustomCommand {
       inputEncoding: 'Base64',
       outputEncoding: 'String',
     });
-    const templateFolder = join(DOBBY_TEMPLATES_FOLDER, name);
+    const templateFolder = join(TP_TEMPLATES_FOLDER, name);
     const alreadyExist = existsSync(templateFolder);
 
     if (alreadyExist && !force)

@@ -8,7 +8,7 @@ import { TPConfig, TPStructureItem } from '../../utils/definitions';
 import { findTPTemplateByName } from '../../utils/functions';
 import CustomCommand from '../../utils/oclif/custom-command';
 import CustomError from '../../utils/oclif/custom-error';
-import { DOBBY_CONFIG_FILE } from '../../utils/variables';
+import { TP_CONFIG_FILE } from '../../utils/variables';
 import { replaceTextWithWildcards } from '../../utils/wildcards';
 import { readYamlFile } from '../../utils/yaml';
 
@@ -40,7 +40,7 @@ export default class Generate extends CustomCommand {
     const { args, flags } = await this.parse(Generate);
 
     const currentPath = process.cwd();
-    const tpConfigPath = join(currentPath, DOBBY_CONFIG_FILE);
+    const tpConfigPath = join(currentPath, TP_CONFIG_FILE);
 
     if (!existsSync(tpConfigPath))
       throw new CustomError('To be able to generate some resource, you should first mark the ');

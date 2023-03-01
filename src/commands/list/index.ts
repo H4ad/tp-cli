@@ -7,7 +7,7 @@ import { TPConfig, TPTemplate } from '../../utils/definitions';
 import { findTPTemplateByName } from '../../utils/functions';
 import CustomCommand from '../../utils/oclif/custom-command';
 import CustomError from '../../utils/oclif/custom-error';
-import { DOBBY_CONFIG_FILE, DOBBY_TEMPLATES_FOLDER } from '../../utils/variables';
+import { TP_CONFIG_FILE, TP_TEMPLATES_FOLDER } from '../../utils/variables';
 import { readYamlFile } from '../../utils/yaml';
 
 export default class List extends CustomCommand {
@@ -47,16 +47,16 @@ export default class List extends CustomCommand {
 
     if (locally) {
       const currentPath = process.cwd();
-      const tpConfigPath = join(currentPath, DOBBY_CONFIG_FILE);
+      const tpConfigPath = join(currentPath, TP_CONFIG_FILE);
 
       if (!existsSync(tpConfigPath))
-        throw new CustomError(`In order to be able to list the locally installed features, you must first generate the "${DOBBY_CONFIG_FILE}" with "tp local <template-name>".`);
+        throw new CustomError(`In order to be able to list the locally installed features, you must first generate the "${TP_CONFIG_FILE}" with "tp local <template-name>".`);
 
       const tpConfig = await readYamlFile(tpConfigPath).then(config => TPConfig.parse(config));
 
       templateFolders = Object.keys(tpConfig.templates);
     } else {
-      templateFolders = await readdir(DOBBY_TEMPLATES_FOLDER);
+      templateFolders = await readdir(TP_TEMPLATES_FOLDER);
     }
 
     return Promise.all(

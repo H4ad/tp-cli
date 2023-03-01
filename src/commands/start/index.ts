@@ -7,7 +7,7 @@ import { join } from 'node:path';
 import { TPTemplate } from '../../utils/definitions';
 import CustomCommand from '../../utils/oclif/custom-command';
 import CustomError from '../../utils/oclif/custom-error';
-import { DOBBY_TEMPLATE_FILE, DOBBY_TEMPLATES_FOLDER } from '../../utils/variables';
+import { TP_TEMPLATE_FILE, TP_TEMPLATES_FOLDER } from '../../utils/variables';
 
 export default class Start extends CustomCommand {
   static description = 'Start a new template.'
@@ -39,8 +39,8 @@ export default class Start extends CustomCommand {
 
     const templateName = paramCase(name);
 
-    const outputFolder = join(DOBBY_TEMPLATES_FOLDER, templateName);
-    const outputFile = join(outputFolder, DOBBY_TEMPLATE_FILE);
+    const outputFolder = join(TP_TEMPLATES_FOLDER, templateName);
+    const outputFile = join(outputFolder, TP_TEMPLATE_FILE);
 
     const alreadyExist = existsSync(outputFile);
 

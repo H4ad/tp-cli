@@ -4,7 +4,7 @@ import { rm } from 'node:fs/promises';
 import { join } from 'node:path';
 import CustomCommand from '../../utils/oclif/custom-command';
 import CustomError from '../../utils/oclif/custom-error';
-import { DOBBY_TEMPLATES_FOLDER } from '../../utils/variables';
+import { TP_TEMPLATES_FOLDER } from '../../utils/variables';
 
 export default class Remove extends CustomCommand {
   static description = 'Remove an installed template.';
@@ -25,10 +25,10 @@ export default class Remove extends CustomCommand {
 
   async run(): Promise<void> {
     const { args } = await this.parse(Remove);
-    const pathToRemove = join(DOBBY_TEMPLATES_FOLDER, args.name || '');
+    const pathToRemove = join(TP_TEMPLATES_FOLDER, args.name || '');
 
     if (!existsSync(pathToRemove))
-      throw new CustomError(`The template with name "${args.name}" was not found at "${DOBBY_TEMPLATES_FOLDER}"`);
+      throw new CustomError(`The template with name "${args.name}" was not found at "${TP_TEMPLATES_FOLDER}"`);
 
     await rm(pathToRemove, {
       force: true,

@@ -6,7 +6,7 @@ import { join } from 'node:path';
 import { TPConfig, TPTemplate } from '../../utils/definitions';
 import { findTPTemplateContentByName } from '../../utils/functions';
 import CustomCommand from '../../utils/oclif/custom-command';
-import { DOBBY_CONFIG_FILE } from '../../utils/variables';
+import { TP_CONFIG_FILE } from '../../utils/variables';
 import { readYamlFile, writeYamlFile } from '../../utils/yaml';
 
 export default class Local extends CustomCommand {
@@ -48,7 +48,7 @@ export default class Local extends CustomCommand {
 
   private async toLocal(name: string, url: string): Promise<void> {
     const currentPath = process.cwd();
-    const configFilepath = join(currentPath, DOBBY_CONFIG_FILE);
+    const configFilepath = join(currentPath, TP_CONFIG_FILE);
 
     let configFile: TPConfig = {
       templates: {},
@@ -63,6 +63,6 @@ export default class Local extends CustomCommand {
 
     await writeYamlFile(configFilepath, configFile);
 
-    this.log(`The template ${name} was saved at ${DOBBY_CONFIG_FILE}.`);
+    this.log(`The template ${name} was saved at ${TP_CONFIG_FILE}.`);
   }
 }
