@@ -1,6 +1,6 @@
 {
-  "name": "tp-cli",
-  "version": "1.0.0",
+  "name": "@h4ad/tp-cli",
+  "version": "0.0.0",
   "description": "Stupid simple way of generate and share templates with everyone.",
   "author": {
     "name": "Vinícius Lourenço",

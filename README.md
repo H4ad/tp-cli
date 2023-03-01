@@ -1,5 +1,5 @@
 <h1 align="center">
-  TP
+  Template (TP) CLI
 </h1>
 
 <p align="center">
@@ -26,7 +26,7 @@ and customize it to your needs, then you can just generate with `tp g controller
 First, install the CLI with:
 
 ```bash
-npm i -g tp-cli
+npm i -g @h4ad/tp-cli
 ```
 
 Then, start your first template with:
@@ -671,25 +671,25 @@ EXAMPLES
 _See code: [dist/commands/start/index.ts](https://github.com/H4ad/tp-cli/blob/v1.0.0/dist/commands/start/index.ts)_
 <!-- commandsstop -->
 
-[build-img]:https://github.com/H4ad/dobby-cli/actions/workflows/release.yml/badge.svg
+[build-img]:https://github.com/H4ad/tp-cli/actions/workflows/release.yml/badge.svg
 
-[build-url]:https://github.com/H4ad/dobby-cli/actions/workflows/release.yml
+[build-url]:https://github.com/H4ad/tp-cli/actions/workflows/release.yml
 
-[downloads-img]:https://img.shields.io/npm/dt/dobby-cli
+[downloads-img]:https://img.shields.io/npm/dt/@h4ad/tp-cli
 
-[downloads-url]:https://www.npmtrends.com/dobby-cli
+[downloads-url]:https://www.npmtrends.com/@h4ad/tp-cli
 
-[npm-img]:https://img.shields.io/npm/v/dobby-cli
+[npm-img]:https://img.shields.io/npm/v/@h4ad/tp-cli
 
-[npm-url]:https://www.npmjs.com/package/dobby-cli
+[npm-url]:https://www.npmjs.com/package/@h4ad/tp-cli
 
-[issues-img]:https://img.shields.io/github/issues/H4ad/dobby-cli
+[issues-img]:https://img.shields.io/github/issues/H4ad/tp-cli
 
-[issues-url]:https://github.com/H4ad/dobby-cli/issues
+[issues-url]:https://github.com/H4ad/tp-cli/issues
 
-[codecov-img]:https://codecov.io/gh/H4ad/dobby-cli/branch/master/graph/badge.svg
+[codecov-img]:https://codecov.io/gh/H4ad/tp-cli/branch/master/graph/badge.svg
 
-[codecov-url]:https://codecov.io/gh/H4ad/dobby-cli
+[codecov-url]:https://codecov.io/gh/H4ad/tp-cli
 
 [semantic-release-img]:https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg
 
