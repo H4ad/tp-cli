@@ -43,7 +43,7 @@ export default class Generate extends CustomCommand {
     const tpConfigPath = join(currentPath, TP_CONFIG_FILE);
 
     if (!existsSync(tpConfigPath))
-      throw new CustomError('To be able to generate some resource, you should first mark the ');
+      throw new CustomError('To be able to generate some resource, you should first run "tp local <template-name>" to save a copy of the template locally.');
 
     const tpConfig = await readYamlFile(tpConfigPath).then(config => TPConfig.parse(config));
     const validTemplates = flags.template ? [flags.template] : Object.keys(tpConfig.templates);
