@@ -1,5 +1,12 @@
 CHANGES:
 
+## [1.0.1](https://github.com/H4ad/tp-cli/compare/v1.0.0...v1.0.1) (2023-03-05)
+
+
+### Bug Fixes
+
+* **command:** generate command with wrong error message ([9dfaa5c](https://github.com/H4ad/tp-cli/commit/9dfaa5c9847342eef32b5ac68ea892d0bec8c5fc))
+
 # 1.0.0 (2023-03-01)
 
 

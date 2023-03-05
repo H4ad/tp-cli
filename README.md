@@ -348,7 +348,7 @@ EXAMPLES
   $ tp g <resource> <name> --template <my-template>
 ```
 
-_See code: [dist/commands/generate/index.ts](https://github.com/H4ad/tp-cli/blob/v1.0.0/dist/commands/generate/index.ts)_
+_See code: [dist/commands/generate/index.ts](https://github.com/H4ad/tp-cli/blob/v1.0.1/dist/commands/generate/index.ts)_
 
 ## `tp help [COMMANDS]`
 
@@ -395,7 +395,7 @@ EXAMPLES
   $ tp install <name> <url>
 ```
 
-_See code: [dist/commands/install/index.ts](https://github.com/H4ad/tp-cli/blob/v1.0.0/dist/commands/install/index.ts)_
+_See code: [dist/commands/install/index.ts](https://github.com/H4ad/tp-cli/blob/v1.0.1/dist/commands/install/index.ts)_
 
 ## `tp l NAME`
 
@@ -469,7 +469,7 @@ EXAMPLES
   $ tp list my-api
 ```
 
-_See code: [dist/commands/list/index.ts](https://github.com/H4ad/tp-cli/blob/v1.0.0/dist/commands/list/index.ts)_
+_See code: [dist/commands/list/index.ts](https://github.com/H4ad/tp-cli/blob/v1.0.1/dist/commands/list/index.ts)_
 
 ## `tp local NAME`
 
@@ -500,7 +500,7 @@ EXAMPLES
   $ tp local test
 ```
 
-_See code: [dist/commands/local/index.ts](https://github.com/H4ad/tp-cli/blob/v1.0.0/dist/commands/local/index.ts)_
+_See code: [dist/commands/local/index.ts](https://github.com/H4ad/tp-cli/blob/v1.0.1/dist/commands/local/index.ts)_
 
 ## `tp ls [NAME]`
 
@@ -566,7 +566,7 @@ EXAMPLES
   $ tp open test
 ```
 
-_See code: [dist/commands/open/index.ts](https://github.com/H4ad/tp-cli/blob/v1.0.0/dist/commands/open/index.ts)_
+_See code: [dist/commands/open/index.ts](https://github.com/H4ad/tp-cli/blob/v1.0.1/dist/commands/open/index.ts)_
 
 ## `tp remove [NAME]`
 
@@ -592,7 +592,7 @@ EXAMPLES
   $ tp remove <name>
 ```
 
-_See code: [dist/commands/remove/index.ts](https://github.com/H4ad/tp-cli/blob/v1.0.0/dist/commands/remove/index.ts)_
+_See code: [dist/commands/remove/index.ts](https://github.com/H4ad/tp-cli/blob/v1.0.1/dist/commands/remove/index.ts)_
 
 ## `tp restore [NAME]`
 
@@ -618,7 +618,7 @@ EXAMPLES
   $ tp restore
 ```
 
-_See code: [dist/commands/restore/index.ts](https://github.com/H4ad/tp-cli/blob/v1.0.0/dist/commands/restore/index.ts)_
+_See code: [dist/commands/restore/index.ts](https://github.com/H4ad/tp-cli/blob/v1.0.1/dist/commands/restore/index.ts)_
 
 ## `tp rm [NAME]`
 
@@ -668,7 +668,7 @@ EXAMPLES
   $ tp start my-api
 ```
 
-_See code: [dist/commands/start/index.ts](https://github.com/H4ad/tp-cli/blob/v1.0.0/dist/commands/start/index.ts)_
+_See code: [dist/commands/start/index.ts](https://github.com/H4ad/tp-cli/blob/v1.0.1/dist/commands/start/index.ts)_
 <!-- commandsstop -->
 
 [build-img]:https://github.com/H4ad/tp-cli/actions/workflows/release.yml/badge.svg
