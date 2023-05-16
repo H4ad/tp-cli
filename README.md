@@ -18,7 +18,7 @@
 Think in this CLI like `@angular/schematics` but way more simpler to configure and use.
 
 If you work on a project that needs to generate a lot of boilerplate code, like when you work with `NestJS` APIs,
-instead use `nest g controller cat` and modify the contents to add authentication and other boilerplate code, just create a template for that project
+instead of using `nest g controller cat` and modifying the contents to add authentication and other boilerplate code, just create a template for that project
 and customize it to your needs, then you can just generate with `tp g controller cat`.
 
 # Usage
