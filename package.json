@@ -52,7 +52,7 @@
     "@types/change-case": "2.3.1",
     "@types/js-yaml": "4.0.5",
     "@types/mocha": "9.0.0",
-    "@types/node": "16.18.12",
+    "@types/node": "16.18.31",
     "@types/open": "6.2.1",
     "@types/pluralize": "0.0.29",
     "@types/prompts": "2.4.2",
